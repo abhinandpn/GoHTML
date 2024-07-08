@@ -1,0 +1,20 @@
+# .air.toml
+root = "."
+tmp_dir = "tmp"
+[build]
+  cmd = "go build -o ./tmp/main ."
+  bin = "tmp/main"
+  full_bin = "APP_ENV=dev APP_NAME=MY_APP_NAME APP_PORT=3000 ./tmp/main"
+  include_ext = ["go"]
+  exclude_dir = ["tmp", "static"]
+  exclude_file = ["_test.go"]
+  exclude_regex = ["_test.go"]
+  follow_symlink = true
+
+[watch]
+  include_ext = ["go", "html", "css", "js"]
+  exclude_dir = ["tmp"]
+  follow_symlink = true
+
+[misc]
+  color = "true"
