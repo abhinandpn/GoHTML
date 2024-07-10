@@ -13,5 +13,49 @@
         <a href="/about">About</a>
         <a href="/contact">Contact</a>
     </nav>
+
+    <form action="/submit_contact" method="post" id="contactForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br>
+
+        <label for="place">Place:</label>
+        <input type="text" id="place" name="place" required><br>
+
+        <label for="contactNo">Contact no:</label>
+        <input type="text" id="contactNo" name="contactNo" required><br>
+
+        <label for="email">EmailId:</label>
+        <input type="email" id="email" name="email" required><br>
+
+        <label for="status">Current Status:</label>
+        <select id="status" name="status">
+            <option value="studying">Studying</option>
+            <option value="working">Working</option>
+            <option value="job_seeking">Job Seeking</option>
+        </select><br>
+
+        <label for="course">Course:</label>
+        <input type="text" id="course" name="course" required><br>
+
+        <label for="tradingBackground">Trading Background:</label>
+        <div id="tradingBackground">
+            <label>
+                <input type="radio" name="tradingBackground" value="beginner" required> Beginner
+            </label><br>
+            <label>
+                <input type="radio" name="tradingBackground" value="intermediate"> Intermediate
+            </label><br>
+            <label>
+                <input type="radio" name="tradingBackground" value="advance"> Advance
+            </label>
+        </div><br>
+
+        <label>
+            <input type="checkbox" id="privacyPolicy" name="privacyPolicy" required>
+            I agree to the <a href="/privacy-policy">Privacy Policy</a>.
+        </label><br>
+
+        <input type="submit" value="Submit">
+    </form>
 </body>
 </html>
